@@ -1,0 +1,9 @@
+{
+  "name": "meal-prep-planner",
+  "version": "0.0.0",
+  "description": "MealPrepPlanner",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}
