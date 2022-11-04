@@ -3,7 +3,7 @@
 }
 
 .u-section-1 .u-sheet-1 {
-  min-height: 100vh;
+  min-height: 681px;
 }
 
 .u-section-1 .u-line-1 {
@@ -59,8 +59,8 @@
 }
 
 .u-section-1 .u-table-cell-8 {
-  background-image: none;
   border-style: double;
+  background-image: none;
 }
 
 .u-section-1 .u-table-cell-9 {
@@ -157,6 +157,55 @@
   padding: 10px 6px 10px 4px;
 }
 
+.u-section-1 .u-btn-4 {
+  background-image: none;
+  border-style: solid;
+  margin: -535px auto 0 266px;
+  padding: 0;
+}
+
+.u-section-1 .u-btn-5 {
+  background-image: none;
+  border-style: solid;
+  margin: -27px auto 0 411px;
+  padding: 0;
+}
+
+.u-section-1 .u-btn-6 {
+  background-image: none;
+  border-style: solid;
+  margin: -27px 509px 0 auto;
+  padding: 0;
+}
+
+.u-section-1 .u-btn-7 {
+  background-image: none;
+  border-style: solid;
+  margin: -27px 374px 0 auto;
+  padding: 0;
+}
+
+.u-section-1 .u-btn-8 {
+  background-image: none;
+  border-style: solid;
+  margin: -27px -56px 0 auto;
+  padding: 0;
+}
+
+.u-section-1 .u-btn-9 {
+  background-image: none;
+  border-style: solid;
+  margin: -27px 84px 0 auto;
+  padding: 0;
+}
+
+.u-section-1 .u-btn-10 {
+  background-image: none;
+  border-style: solid;
+  margin: -27px 238px 60px auto;
+  padding: 0;
+}
+
 @media (max-width: 1199px) {
   .u-section-1 .u-table-cell-4 {
     width: 341px;
@@ -209,6 +258,34 @@
   .u-section-1 .u-btn-3 {
     margin-left: 0;
   }
+
+  .u-section-1 .u-btn-4 {
+    margin-left: 66px;
+  }
+
+  .u-section-1 .u-btn-5 {
+    margin-left: 211px;
+  }
+
+  .u-section-1 .u-btn-6 {
+    margin-right: 309px;
+  }
+
+  .u-section-1 .u-btn-7 {
+    margin-right: 174px;
+  }
+
+  .u-section-1 .u-btn-8 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-btn-9 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-btn-10 {
+    margin-right: 38px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -219,6 +296,26 @@
 
   .u-section-1 .u-table-2 {
     margin-top: 0;
+  }
+
+  .u-section-1 .u-btn-4 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-btn-5 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-btn-6 {
+    margin-right: 89px;
+  }
+
+  .u-section-1 .u-btn-7 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-btn-10 {
+    margin-right: 0;
   }
 }
 
@@ -270,6 +367,10 @@
 
   .u-section-1 .u-table-3 {
     margin-top: -266px;
+  }
+
+  .u-section-1 .u-btn-6 {
+    margin-right: 0;
   }
 }
 
