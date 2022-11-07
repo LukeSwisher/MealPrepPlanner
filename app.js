@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
-
+//Register a new user
 app.post('/register', async (req, res) => {
     try {
         let foundUser = users.find((data) => req.body.email === data.email);
@@ -42,6 +42,7 @@ app.post('/register', async (req, res) => {
     }
 });
 
+//Login an existing user
 app.post('/login', async (req, res) => {
     try {
         let foundUser = users.find((data) => req.body.email === data.email);
