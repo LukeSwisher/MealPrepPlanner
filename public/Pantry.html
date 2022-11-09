@@ -108,10 +108,12 @@
 
     document.getElementById("removeBtn").addEventListener('click', function ()
     {
-        console.log("this worked too!");
-        pantryTtems = pantryItems.splice(document.getElementById("removeText").value-1,1);
-        displayArray(pantryItems);
-
+        if (document.getElementById("addText").value != "")
+        {
+            console.log("this worked too!");
+            pantryTtems = pantryItems.splice(document.getElementById("removeText").value - 1, 1);
+            displayArray(pantryItems);
+        }
     });
 
     function displayArray(array)
