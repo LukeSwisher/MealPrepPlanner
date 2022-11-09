@@ -49,6 +49,7 @@
     let shoppingList = [];
     displayShoppingList(shoppingList);
 
+    //Add an item to the shopping list and display it
     document.getElementById("addItemBtn").addEventListener('click', function ()
     {
         if (document.getElementById("addItemText").value != "")
@@ -62,7 +63,8 @@
         }
         
     });
-    
+
+    //Clear the shopping list
     document.getElementById("removeItemBtn").addEventListener('click', function ()
     {
       document.getElementById("shoppingListDisplay").innerHTML = "";
@@ -77,13 +79,14 @@
         }*/
     });
 
+    //Display shoppingList array on the page
     function displayShoppingList(array)
     {
         displayString = "";
 
         for (var x = 0; x < array.length; x++)
         {
-            displayString = displayString + "\n" + (x+1) + ". " + array[x];
+            displayString = displayString + (x+1) + ". " + array[x];
         }
         document.getElementById("shoppingListDisplay").innerHTML = displayString;
     }
