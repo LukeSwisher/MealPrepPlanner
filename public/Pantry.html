@@ -63,7 +63,7 @@
             <h1 class="u-text u-text-default u-text-1">Your Ingredients</h1>
             <div class="u-border-2 u-border-custom-color-1 u-container-style u-group u-white u-group-1">
                 <div class="u-container-layout u-container-layout-1">
-                    <p id="displayPantry"class="u-text u-text-default u-text-2"></p>
+                    <p id="pantryDisplay"class="u-text u-text-default u-text-2"></p>
                 </div>
             </div>
             <h1 class="u-text u-text-default u-text-3">Add Ingredients</h1>
@@ -89,8 +89,8 @@
 
 <script>
     var displayString = " ";
-    let pantryItems = []
-    displayArray(pantryItems);
+    let pantryItems = [];
+    displayPantry(pantryItems);
 
     document.getElementById("addBtn").addEventListener('click', function ()
     {
@@ -99,9 +99,9 @@
             const addBox = document.getElementById("addText").value;
             console.log(addBox);
             pantryItems.push(document.getElementById("addText").value);
-            document.getElementById("displayPantry").innerHTML = displayString;
+            document.getElementById("pantryDisplay").innerHTML = displayString;
             document.getElementById("addText").value = "";
-            displayArray(pantryItems);
+            displayPantry(pantryItems);
         }
         
     });
@@ -113,13 +113,13 @@
             console.log("this worked too!");
             pantryItems.splice(document.getElementById("removeText").value - 1, 1);
             document.getElementById("removeText").value = "";
-            displayArray(pantryItems);
+            displayPantry(pantryItems);
         }
         
 
     });
 
-    function displayArray(array)
+    function displayPantry(array)
     {
         displayString = "";
 
@@ -127,6 +127,6 @@
         {
             displayString = displayString + "\n" + (x+1) + ". " + array[x];
         }
-        document.getElementById("displayPantry").innerHTML = displayString;
+        document.getElementById("pantryDisplay").innerHTML = displayString;
     }
 </script>
