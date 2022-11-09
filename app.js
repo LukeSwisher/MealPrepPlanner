@@ -23,13 +23,14 @@ app.post('/register', async (req, res) => {
         if (!foundUser) {
 
             let hashPassword = await bcrypt.hash(req.body.password, 10);
-
+            //creating newUser
             let newUser = {
                 id: Date.now(),
                 username: req.body.username,
                 email: req.body.email,
                 password: hashPassword,
             };
+            //push the newly createduser into the our database.
             users.push(newUser);
             console.log('User list', users);
 
@@ -52,15 +53,17 @@ app.post('/login', async (req, res) => {
             let storedPass = foundUser.password;
 
             const passwordMatch = await bcrypt.compare(submittedPass, storedPass);
+            //send user to home page
             if (passwordMatch) {
                 let usrname = foundUser.username;
                 res.redirect('/Home.html');
             } else {
+                //bring up error message for invalid login
                 res.send("<div align ='center'><h2>Invalid email or password</h2></div><br><br><div align ='center'><a href='./login.html'>login again</a></div>");
             }
         }
         else {
-
+            //encryption
             let fakePass = `$2b$$10$ifgfgfgfgfgfgfggfgfgfggggfgfgfga`;
             await bcrypt.compare(req.body.password, fakePass);
 

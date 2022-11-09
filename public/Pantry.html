@@ -88,10 +88,14 @@
 </html>
 
 <script>
+    //string for displaying the list of pantry items
     var displayString = " ";
+
+    //array for storing pantry items(user input)
     let pantryItems = [];
     displayPantry(pantryItems);
 
+    //add given user input to the pantryItems array and display it
     document.getElementById("addBtn").addEventListener('click', function ()
     {
         if (document.getElementById("addText").value != "")
@@ -105,7 +109,7 @@
         }
         
     });
-
+     //remove an element of the pantryItems array at the given index, then display the altered array
     document.getElementById("removeBtn").addEventListener('click', function ()
     {
         if (document.getElementById("removeText").value != "")
@@ -118,7 +122,7 @@
         
 
     });
-
+    //display the array inside of the textbox in a numbered list
     function displayPantry(array)
     {
         displayString = "";
