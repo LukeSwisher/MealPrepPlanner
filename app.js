@@ -28,7 +28,7 @@ app.post('/register', async (req, res) => {
                 id: Date.now(),
                 username: req.body.username,
                 email: req.body.email,
-                password: hashPassword,+
+                password: hashPassword,
             };
             users.push(newUser);
             console.log('User list', users);
@@ -50,18 +50,15 @@ app.post('/login', async (req, res) => {
 
             let submittedPass = req.body.password;
             let storedPass = foundUser.password;
-            
+
             const passwordMatch = await bcrypt.compare(submittedPass, storedPass);
-            //send user to home page
             if (passwordMatch) {
                 let usrname = foundUser.username;
                 res.redirect('/Home.html');
-              //bring up error message for invalid login
             } else {
                 res.send("<div align ='center'><h2>Invalid email or password</h2></div><br><br><div align ='center'><a href='./login.html'>login again</a></div>");
             }
         }
-        //bring up error message for invalid login
         else {
 
             let fakePass = `$2b$$10$ifgfgfgfgfgfgfggfgfgfggggfgfgfga`;
