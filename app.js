@@ -30,7 +30,7 @@ app.post('/register', async (req, res) => {
                 email: req.body.email,
                 password: hashPassword,
             };
-            //push the newly createduser into the our database.
+            //push the newly created user into the our database.
             users.push(newUser);
             console.log('User list', users);
 
