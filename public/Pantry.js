@@ -2,7 +2,20 @@
     var displayString = " ";
 
     //array for storing pantry items(user input)
-    let pantryItems = [];
+    var pantryItems;
+    
+    //check if "Pantry" key exists in local storage: create array if it doesn't exist
+    if (localStorage.getItem("Pantry") === null)
+    {
+        localStorage.setItem("Pantry", " ")
+        pantryItems = [];
+    }
+    else
+    {
+        //set pantryItems to saved array
+        pantryItems = JSON.parse(localStorage.getItem("Pantry"));
+    }
+
     displayPantry(pantryItems);
 
     //add given user input to the pantryItems array and display it
@@ -16,6 +29,8 @@
             document.getElementById("pantryDisplay").innerHTML = displayString;
             document.getElementById("addText").value = "";
             displayPantry(pantryItems);
+            var temp = JSON.stringify(pantryItems);
+            localStorage.setItem("Pantry", temp);
         }
         
     });
@@ -28,6 +43,8 @@
             pantryItems.splice(document.getElementById("removeText").value - 1, 1);
             document.getElementById("removeText").value = "";
             displayPantry(pantryItems);
+            var temp = JSON.stringify(pantryItems);
+            localStorage.setItem("Pantry", temp);
         }
         
 
