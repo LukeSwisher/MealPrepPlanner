@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const path = require("path");
 const bodyParser = require('body-parser');
 const users = require('./data').userDB;
+const fs = require("fs");
 
 const app = express();
 const server = http.createServer(app);
@@ -33,6 +34,14 @@ app.post('/register', async (req, res) => {
             //push the newly created user into the our database.
             users.push(newUser);
             console.log('User list', users);
+
+            //write new user to users.txt
+            fs.writeFile("./users.txt", JSON.stringify(users), (err) => {
+            if (err) {
+            console.error(err);
+            return;
+                }
+            })
 
             res.send("<div align ='center'><h2>Registration successful</h2></div><br><br><div align='center'><a href='./home.html'>login</a></div><br><br><div align='center'><a href='./registration.html'>Register another user</a></div>");
         } else {
