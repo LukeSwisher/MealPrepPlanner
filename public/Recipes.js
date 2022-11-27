@@ -39,6 +39,8 @@
                 document.getElementById("addName").value = "";
                 document.getElementById("addInstructions").value = "";
                 document.getElementById("addIngredients").value = "";
+
+                displayRecipes(recipes);
             }
         });
 
