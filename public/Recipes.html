@@ -47,25 +47,31 @@
           </div>
           <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
         </div>
-      </nav></header>
+      </nav></header> <p class="u-text u-text-3" id="recipeDisplay"></p>
     <section class="u-clearfix u-custom-color-1 u-section-1" id="sec-6987">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-text u-text-default u-text-1">Selected Recipe</h3>
+       
         <h3 class="u-text u-text-default u-text-2">Your Recipes</h3>
         <div class="u-border-2 u-border-custom-color-2 u-container-style u-group u-white u-group-1">
           <div class="u-container-layout u-container-layout-1">
-            <p class="u-text u-text-3">Sample text. Click to select the Text Element.</p>
+            <p class="u-text u-text-3" id="selectedRecipe">Sample text. Click to select the Text Element.</p>
           </div>
         </div>
         <h3 class="u-text u-text-default u-text-4">Add Recipes</h3>
-        <a href="https://nicepage.com/wysiwyg-html-editor" class="u-border-none u-btn u-button-style u-custom-color-2 u-hover-palette-1-dark-1 u-btn-1">Ok</a>
+        <a  class="u-border-none u-btn u-button-style u-custom-color-2 u-hover-palette-1-dark-1 u-btn-1" id="addRecipeBtn">Add</a>
         <div class="u-container-style u-grey-10 u-group u-group-2">
           <div class="u-container-layout u-container-layout-2"></div>
         </div>
         <div class="u-container-style u-grey-10 u-group u-group-3">
+           <h1 class="u-text u-text-default u-text-3">Recipe Name:</h1>
+          <input type="text" id="addName" size="10">
           <div class="u-container-layout u-container-layout-3"></div>
         </div>
         <div class="u-container-style u-grey-10 u-group u-group-4">
+           <h1 class="text">Recipe Instructions</h1>
+          <input type="text" id="addInstructions" size="10">
+          <input type="text" id="addIngredients" size="10">
           <div class="u-container-layout u-container-layout-4"></div>
         </div>
       </div>
@@ -74,4 +80,5 @@
   
 </body></html>
 
+<script src="currentUser.js"></script>
 <script src="Recipes.js"></script>

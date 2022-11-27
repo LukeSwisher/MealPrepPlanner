@@ -41,7 +41,6 @@
     {
         if (document.getElementById("removeText").value != "")
         {
-            console.log("this worked too!");
             pantryItems.splice(document.getElementById("removeText").value - 1, 1);
             document.getElementById("removeText").value = "";
             displayPantry(pantryItems);
