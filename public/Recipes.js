@@ -44,6 +44,18 @@
             }
         });
 
+        //display selected array
+    document.getElementById("selectBtn").addEventListener('click', function ()
+    {
+        displayString = "";
+        if (document.getElementById("selectRecipe").value != "") //&& typeof document.getElementById("selectRecipe").value === 'number' && document.getElementById("selectRecipe").value <= recipes.length && document.getElementById("selectRecipe").value >= 1)
+        {
+            document.getElementById("selectedRecipe").innerHTML = formatRecipe(recipes[document.getElementById("selectRecipe").value - 1]);
+            document.getElementById("selectRecipe").value = "";
+        }
+
+        });
+
         //display the array inside of the textbox in a numbered list
         function displayRecipes(array)
         {
@@ -53,5 +65,12 @@
             {
                 displayString = displayString + "\n" + (x+1) + ". " + array[x].Name;
             }
-            document.getElementById("recipeDisplay").innerHTML = displayString;
+            document.getElementById("allRecipes").innerHTML = displayString;
+        }
+
+        //format string to display selected recipe
+        function formatRecipe(Object)
+        {
+            displayString = Object.Name + "<br/><br/>" + Object.Ingredients + "<br/><br/>" + Object.Instructions;
+            return displayString;
         }

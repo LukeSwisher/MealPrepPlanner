@@ -5,7 +5,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>Recipes</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="nicepageRecipes.css" media="screen">
 <link rel="stylesheet" href="Recipes.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
@@ -23,7 +23,7 @@
     <meta property="og:title" content="Recipes">
     <meta property="og:type" content="website">
   </head>
-  <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-custom-color-2 u-header u-valign-bottom u-header" id="sec-39ac"><a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500">
+  <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-custom-color-2 u-header u-valign-bottom u-header" id="sec-39ac"><a href="./Home.html" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500">
         <img src="images/MPP.png" class="u-logo-image u-logo-image-1">
       </a><p class="u-text u-text-default u-text-white u-text-1">Recipes</p><nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
         <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -54,40 +54,29 @@
         <h3 class="u-text u-text-default u-text-2">Your Recipes</h3>
         <div class="u-border-2 u-border-custom-color-2 u-container-style u-group u-white u-group-1">
           <div class="u-container-layout u-container-layout-1">
-            <p class="u-text u-text-3">Sample text. Click to select the Text Element.</p>
+            <p id="selectedRecipe" class="u-text u-text-3"></p>
           </div>
         </div>
         <h3 class="u-text u-text-default u-text-4">Add Recipes</h3>
         <h5 class="u-text u-text-default u-text-5">Recipe Name</h5>
-        <div class="u-custom-color-1 u-custom-item u-shape u-shape-rectangle u-shape-1"></div>
+        <div class="u-custom-color-1 u-custom-item u-shape u-shape-rectangle u-shape-1"> <input type="text" id="addName" size="28" style="color:black;"></div>
         <h5 class="u-text u-text-default u-text-6">Recipe Instructions</h5>
-        <div class="u-custom-color-1 u-custom-item u-shape u-shape-rectangle u-shape-2"></div>
+        <div class="u-custom-color-1 u-custom-item u-shape u-shape-rectangle u-shape-2"> <textarea rows = "3" cols = "29" id = "addInstructions" style="color:black;"></textarea></div>
         <div class="u-border-2 u-border-custom-color-2 u-container-style u-group u-white u-group-2">
           <div class="u-container-layout u-container-layout-2">
-            <p class="u-text u-text-7">Right here</p>
+            <p id="allRecipes" class="u-text u-text-7"></p>
           </div>
         </div>
-        <h5 class="u-text u-text-default u-text-8">Recipe Ingredients</h5>
-        <div class="u-custom-color-1 u-custom-item u-shape u-shape-rectangle u-shape-3"></div>
+        <h5 class="u-text u-text-default u-text-8">Recipe Ingredients(separate with ",")</h5>
+        <div class="u-custom-color-1 u-custom-item u-shape u-shape-rectangle u-shape-3"> <textarea rows = "3" cols = "29" id = "addIngredients" style="color:black;"></textarea></div>
         <h3 class="u-text u-text-default u-text-9">Select Recipe By Number</h3>
-        <a href="https://nicepage.com/wysiwyg-html-editor" class="u-border-none u-btn u-button-style u-custom-color-2 u-hover-palette-1-dark-1 u-btn-1">Select</a>
-        <a href="https://nicepage.com/wysiwyg-html-editor" class="u-border-none u-btn u-button-style u-custom-color-2 u-hover-palette-1-dark-1 u-btn-2">Ok</a>
-        <div class="u-custom-color-1 u-custom-item u-shape u-shape-rectangle u-shape-4"></div>
+        <a id="selectBtn" class="u-border-none u-btn u-button-style u-custom-color-2 u-hover-palette-1-dark-1 u-btn-1">Select</a>
+        <a id="addRecipeBtn" class="u-border-none u-btn u-button-style u-custom-color-2 u-hover-palette-1-dark-1 u-btn-2">Add</a>
+        <div class="u-custom-color-1 u-custom-item u-shape u-shape-rectangle u-shape-4"> <input type="text" id="selectRecipe" size="10" style="color:black;"></div>
       </div>
-    </section>
-    
-    
-    
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="" target="_blank">
-        <span>Website Builder Software</span>
-      </a>. 
     </section>
   
 </body></html>
+
+<script src="currentUser.js"></script>
+<script src="Recipes.js"></script>
