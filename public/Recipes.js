@@ -71,6 +71,6 @@
         //format string to display selected recipe
         function formatRecipe(Object)
         {
-            displayString = Object.Name + "<br/><br/>" + Object.Ingredients + "<br/><br/>" + Object.Instructions;
+            displayString = Object.Name + "<br/><br/>" + "Ingredients:<br/>" + Object.Ingredients + "<br/><br/>" + "Instructions:<br/>" + Object.Instructions;
             return displayString;
         }
