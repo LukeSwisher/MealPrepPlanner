@@ -3,17 +3,19 @@
 
     //array for storing pantry items(user input)
     var pantryItems;
+
+    console.log(currentUser);
     
     //check if "Pantry" key exists in local storage: create array if it doesn't exist
-    if (localStorage.getItem("Pantry") === null)
+    if (localStorage.getItem(currentUser + "Pantry") === null || localStorage.getItem(currentUser + "Pantry") === " ")
     {
-        localStorage.setItem("Pantry", " ")
+        localStorage.setItem(currentUser + "Pantry", " ")
         pantryItems = [];
     }
     else
     {
         //set pantryItems to saved array
-        pantryItems = JSON.parse(localStorage.getItem("Pantry"));
+        pantryItems = JSON.parse(localStorage.getItem(currentUser + "Pantry"));
     }
 
     displayPantry(pantryItems);
@@ -30,7 +32,7 @@
             document.getElementById("addText").value = "";
             displayPantry(pantryItems);
             var temp = JSON.stringify(pantryItems);
-            localStorage.setItem("Pantry", temp);
+            localStorage.setItem(currentUser + "Pantry", temp);
         }
         
     });
@@ -44,7 +46,7 @@
             document.getElementById("removeText").value = "";
             displayPantry(pantryItems);
             var temp = JSON.stringify(pantryItems);
-            localStorage.setItem("Pantry", temp);
+            localStorage.setItem(currentUser + "Pantry", temp);
         }
         
 

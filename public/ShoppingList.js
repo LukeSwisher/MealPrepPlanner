@@ -2,15 +2,15 @@
     var shoppingList;
 
     //check if "ShoppingList" key exists in local storage: create array if it doesn't exist
-    if (localStorage.getItem("ShoppingList") === null)
+    if (localStorage.getItem(currentUser + "ShoppingList") === null || localStorage.getItem(currentUser + "ShoppingList") === " ")
     {
-        localStorage.setItem("ShoppingList", " ")
+        localStorage.setItem(currentUser + "ShoppingList", " ")
         shoppingList = [];
     }
     else
     {
         //set shoppingList to saved array
-        shoppingList = JSON.parse(localStorage.getItem("ShoppingList"));
+        shoppingList = JSON.parse(localStorage.getItem(currentUser + "ShoppingList"));
     }
 
     
@@ -28,7 +28,7 @@
             document.getElementById("addItemText").value = "";
             displayShoppingList(shoppingList);
             var temp = JSON.stringify(shoppingList);
-            localStorage.setItem("ShoppingList", temp);
+            localStorage.setItem(currentUser + "ShoppingList", temp);
         }
         
     });
@@ -39,7 +39,7 @@
       document.getElementById("shoppingListDisplay").innerHTML = "";
       shoppingList = [];
       var temp = JSON.stringify(shoppingList);
-      localStorage.setItem("ShoppingList", temp);
+      localStorage.setItem(currentUser + "ShoppingList", temp);
     });
 
     //Display shoppingList array on the page

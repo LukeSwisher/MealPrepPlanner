@@ -9,6 +9,8 @@ const fs = require("fs");
 const app = express();
 const server = http.createServer(app);
 
+var currentUser = "";
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, './public')));
 
@@ -43,6 +45,16 @@ app.post('/register', async (req, res) => {
                 }
             })
 
+            currentUser = req.body.email;
+
+            //write current user to currentUser.js
+            fs.writeFile("./public/currentUser.js", "var currentUser = " + '"' + currentUser + '"' + ";", (err) => {
+            if (err) {
+            console.error(err);
+            return;
+                }
+            })
+
             res.send("<div align ='center'><h2>Registration successful</h2></div><br><br><div align='center'><a href='./home.html'>login</a></div><br><br><div align='center'><a href='./registration.html'>Register another user</a></div>");
         } else {
             res.send("<div align ='center'><h2>Email already used</h2></div><br><br><div align='center'><a href='./registration.html'>Register again</a></div>");
@@ -62,6 +74,17 @@ app.post('/login', async (req, res) => {
             let storedPass = foundUser.password;
 
             const passwordMatch = await bcrypt.compare(submittedPass, storedPass);
+
+            currentUser = req.body.email;
+
+            //write current user to currentUser.js
+            fs.writeFile("./public/currentUser.js", "var currentUser = " + '"' + currentUser + '"' + ";", (err) => {
+            if (err) {
+            console.error(err);
+            return;
+                }
+            });
+
             //send user to home page
             if (passwordMatch) {
                 let usrname = foundUser.username;
