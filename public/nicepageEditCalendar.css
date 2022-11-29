@@ -38599,6 +38599,7 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-header .u-text-1 {
+  text-decoration: underline !important;
   margin: -108px auto 70px;
 }
 @media (max-width: 1199px) {
