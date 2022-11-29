@@ -38768,24 +38768,139 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-header .u-sheet-1 {
-  min-height: 121px;
+  min-height: 2404px;
 }
 
 .u-header .u-menu-1 {
-  margin: 40px 0 60px auto;
+  margin: -363px 0 0 auto;
 }
 
 .u-header .u-nav-1 {
   font-size: 1.25rem;
 }
+
+.u-header .u-shape-1 {
+  width: 17px;
+  height: 15px;
+  margin: 1019px 812px 0 312px;
+}
+
+.u-header .u-shape-2 {
+  width: 17px;
+  height: 15px;
+  margin: 20px 812px 0 312px;
+}
+
+.u-header .u-shape-3 {
+  width: 16px;
+  height: 15px;
+  margin: 20px 813px 0 312px;
+}
+
+.u-header .u-shape-4 {
+  width: 21px;
+  height: 17px;
+  margin: 20px 808px 0 312px;
+}
+
+.u-header .u-shape-5 {
+  width: 17px;
+  height: 17px;
+  margin: 20px 812px 60px 312px;
+}
 @media (max-width: 1199px) {
   .u-header .u-menu-1 {
     width: auto;
   }
+
+  .u-header .u-shape-1 {
+    margin-right: 812px;
+    margin-left: 0;
+  }
+
+  .u-header .u-shape-2 {
+    margin-right: 812px;
+    margin-left: 0;
+  }
+
+  .u-header .u-shape-3 {
+    margin-right: 813px;
+    margin-left: 0;
+  }
+
+  .u-header .u-shape-4 {
+    margin-right: 808px;
+    margin-left: 0;
+  }
+
+  .u-header .u-shape-5 {
+    margin-right: 812px;
+    margin-left: 0;
+  }
 }
+@media (max-width: 991px) {
+  .u-header .u-shape-1 {
+    margin-right: 703px;
+  }
 
+  .u-header .u-shape-2 {
+    margin-right: 703px;
+  }
 
+  .u-header .u-shape-3 {
+    margin-right: 704px;
+  }
 
+  .u-header .u-shape-4 {
+    margin-right: 699px;
+  }
+
+  .u-header .u-shape-5 {
+    margin-right: 703px;
+  }
+}
+@media (max-width: 767px) {
+  .u-header .u-shape-1 {
+    margin-right: 523px;
+  }
+
+  .u-header .u-shape-2 {
+    margin-right: 523px;
+  }
+
+  .u-header .u-shape-3 {
+    margin-right: 524px;
+  }
+
+  .u-header .u-shape-4 {
+    margin-right: 519px;
+  }
+
+  .u-header .u-shape-5 {
+    margin-right: 523px;
+  }
+}
+@media (max-width: 575px) {
+  .u-header .u-shape-1 {
+    margin-right: 323px;
+  }
+
+  .u-header .u-shape-2 {
+    margin-right: 323px;
+  }
+
+  .u-header .u-shape-3 {
+    margin-right: 324px;
+  }
+
+  .u-header .u-shape-4 {
+    margin-right: 319px;
+  }
+
+  .u-header .u-shape-5 {
+    margin-right: 323px;
+  }
+}
  .u-footer {
   background-image: none;
 }
