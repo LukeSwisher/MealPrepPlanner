@@ -94,7 +94,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("breakfastDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("breakfastDisplay").innerHTML = "Breakfast: No recipe selected";
                 }
 
                 if (array2D[0][1] != 0)
@@ -103,7 +103,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("lunchDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("lunchDisplay").innerHTML = "Lunch: No recipe selected";
                 }
 
                 if (array2D[0][2] != 0)
@@ -112,7 +112,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("dinnerDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("dinnerDisplay").innerHTML = "Dinner: No recipe selected";
                 }
         });
 
@@ -125,7 +125,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("breakfastDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("breakfastDisplay").innerHTML = "Breakfast: No recipe selected";
                 }
 
                 if (array2D[1][1] != 0)
@@ -134,7 +134,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("lunchDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("lunchDisplay").innerHTML = "Lunch: No recipe selected";
                 }
 
                 if (array2D[1][2] != 0)
@@ -143,7 +143,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("dinnerDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("dinnerDisplay").innerHTML = "Dinner: No recipe selected";
                 }
         });
 
@@ -156,7 +156,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("breakfastDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("breakfastDisplay").innerHTML = "Breakfast: No recipe selected";
                 }
 
                 if (array2D[2][1] != 0)
@@ -165,7 +165,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("lunchDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("lunchDisplay").innerHTML = "Lunch: No recipe selected";
                 }
 
                 if (array2D[2][2] != 0)
@@ -174,7 +174,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("dinnerDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("dinnerDisplay").innerHTML = "Dinner: No recipe selected";
                 }
         });
 
@@ -186,7 +186,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("breakfastDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("breakfastDisplay").innerHTML = "Breakfast: No recipe selected";
                 }
 
                 if (array2D[3][1] != 0)
@@ -195,7 +195,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("lunchDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("lunchDisplay").innerHTML = "Lunch: No recipe selected";
                 }
 
                 if (array2D[3][2] != 0)
@@ -204,7 +204,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("dinnerDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("dinnerDisplay").innerHTML = "Dinner: No recipe selected";
                 }
         });
 
@@ -216,7 +216,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("breakfastDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("breakfastDisplay").innerHTML = "Breakfast: No recipe selected";
                 }
 
                 if (array2D[4][1] != 0)
@@ -225,7 +225,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("lunchDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("lunchDisplay").innerHTML = "Lunch: No recipe selected";
                 }
 
                 if (array2D[4][2] != 0)
@@ -234,7 +234,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("dinnerDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("dinnerDisplay").innerHTML = "Dinner: No recipe selected";
                 }
         });
 
@@ -246,7 +246,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("breakfastDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("breakfastDisplay").innerHTML = "Breakfast: No recipe selected";
                 }
 
                 if (array2D[5][1] != 0)
@@ -255,7 +255,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("lunchDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("lunchDisplay").innerHTML = "Lunch: No recipe selected";
                 }
 
                 if (array2D[5][2] != 0)
@@ -264,7 +264,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("dinnerDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("dinnerDisplay").innerHTML = "Dinner: No recipe selected";
                 }
         });
 
@@ -276,7 +276,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("breakfastDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("breakfastDisplay").innerHTML = "Breakfast: No recipe selected";
                 }
 
                 if (array2D[6][1] != 0)
@@ -285,7 +285,7 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("lunchDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("lunchDisplay").innerHTML = "Lunch: No recipe selected";
                 }
 
                 if (array2D[6][2] != 0)
@@ -294,6 +294,6 @@ function displayHome()
                 }
                 else
                 {
-                    document.getElementById("dinnerDisplay").innerHTML = "No recipe selected";
+                    document.getElementById("dinnerDisplay").innerHTML = "Dinner: No recipe selected";
                 }
         });
