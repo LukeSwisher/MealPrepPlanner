@@ -35,7 +35,7 @@ document.getElementById("saveBreakfastBtn").addEventListener('click', function (
     	{
     		if (selectedDay != null && document.getElementById("userBreakfast").value != "" && document.getElementById("userBreakfast").value != 0)
     		{
-    			var userNum = document.getElementById("userBreakfast").value - 1;
+    			var userNum = document.getElementById("userBreakfast").value;
     			array2D[selectedDay][0] = userNum;
     			localStorage.setItem(currentUser + "CalendarConfig", JSON.stringify(array2D));
     		}
@@ -45,7 +45,7 @@ document.getElementById("saveLunchBtn").addEventListener('click', function ()
     	{
     		if (selectedDay != null && document.getElementById("userLunch").value != "" && document.getElementById("userBreakfast").value != 0)
     		{
-    			array2D[selectedDay][1] = document.getElementById("userLunch").value - 1;
+    			array2D[selectedDay][1] = document.getElementById("userLunch").value;
     			localStorage.setItem(currentUser + "CalendarConfig", JSON.stringify(array2D));
     		}
         });
@@ -54,7 +54,7 @@ document.getElementById("saveDinnerBtn").addEventListener('click', function ()
     	{
     		if (selectedDay != null && document.getElementById("userDinner").value != "" && document.getElementById("userBreakfast").value != 0)
     		{
-    			array2D[selectedDay][2] = document.getElementById("userDinner").value - 1;
+    			array2D[selectedDay][2] = document.getElementById("userDinner").value;
     			localStorage.setItem(currentUser + "CalendarConfig", JSON.stringify(array2D));
     		}
         });
@@ -67,7 +67,7 @@ document.getElementById("editMon").addEventListener('click', function ()
 		{
 			if (array2D[selectedDay][0] != 0)
 			{
-				document.getElementById("userBreakfast").value = array2D[0][0] + 1;
+				document.getElementById("userBreakfast").value = array2D[0][0];
 			}
 			else
 			{
@@ -75,7 +75,7 @@ document.getElementById("editMon").addEventListener('click', function ()
 			}
 			if (array2D[selectedDay][1] != 0)
 			{
-				document.getElementById("userLunch").value = array2D[0][1] + 1;
+				document.getElementById("userLunch").value = array2D[0][1];
 			}
 			else
 			{
@@ -83,7 +83,7 @@ document.getElementById("editMon").addEventListener('click', function ()
 			}
 			if (array2D[selectedDay][2] != 0)
 			{
-				document.getElementById("userDinner").value = array2D[0][2] + 1;
+				document.getElementById("userDinner").value = array2D[0][2];
 			}
 			else
 			{
@@ -101,7 +101,7 @@ document.getElementById("editTues").addEventListener('click', function ()
 		{
 			if (array2D[selectedDay][0] != 0)
 			{
-				document.getElementById("userBreakfast").value = array2D[1][0] + 1;
+				document.getElementById("userBreakfast").value = array2D[1][0];
 			}
 			else
 			{
@@ -109,7 +109,7 @@ document.getElementById("editTues").addEventListener('click', function ()
 			}
 			if (array2D[selectedDay][1] != 0)
 			{
-				document.getElementById("userLunch").value = array2D[1][1] + 1;
+				document.getElementById("userLunch").value = array2D[1][1];
 			}
 			else
 			{
@@ -117,7 +117,7 @@ document.getElementById("editTues").addEventListener('click', function ()
 			}
 			if (array2D[selectedDay][2] != 0)
 			{
-				document.getElementById("userDinner").value = array2D[1][2] + 1;
+				document.getElementById("userDinner").value = array2D[1][2];
 			}
 			else
 			{
@@ -137,7 +137,7 @@ document.getElementById("editWed").addEventListener('click', function ()
 		{
 			if (array2D[selectedDay][0] != 0)
 			{
-				document.getElementById("userBreakfast").value = array2D[2][0] + 1;
+				document.getElementById("userBreakfast").value = array2D[2][0];
 			}
 			else
 			{
@@ -145,7 +145,7 @@ document.getElementById("editWed").addEventListener('click', function ()
 			}
 			if (array2D[selectedDay][1] != 0)
 			{
-				document.getElementById("userLunch").value = array2D[2][1] + 1;
+				document.getElementById("userLunch").value = array2D[2][1];
 			}
 			else
 			{
@@ -153,7 +153,7 @@ document.getElementById("editWed").addEventListener('click', function ()
 			}
 			if (array2D[selectedDay][2] != 0)
 			{
-				document.getElementById("userDinner").value = array2D[2][2] + 1;
+				document.getElementById("userDinner").value = array2D[2][2];
 			}
 			else
 			{
@@ -170,7 +170,7 @@ document.getElementById("editThur").addEventListener('click', function ()
 		{
 			if (array2D[selectedDay][0] != 0)
 			{
-				document.getElementById("userBreakfast").value = array2D[3][0] + 1;
+				document.getElementById("userBreakfast").value = array2D[3][0];
 			}
 			else
 			{
@@ -178,7 +178,7 @@ document.getElementById("editThur").addEventListener('click', function ()
 			}
 			if (array2D[selectedDay][1] != 0)
 			{
-				document.getElementById("userLunch").value = array2D[3][1] + 1;
+				document.getElementById("userLunch").value = array2D[3][1];
 			}
 			else
 			{
@@ -186,7 +186,7 @@ document.getElementById("editThur").addEventListener('click', function ()
 			}
 			if (array2D[selectedDay][2] != 0)
 			{
-				document.getElementById("userDinner").value = array2D[3][2] + 1;
+				document.getElementById("userDinner").value = array2D[3][2];
 			}
 			else
 			{
@@ -203,7 +203,7 @@ document.getElementById("editFri").addEventListener('click', function ()
 		{
 			if (array2D[selectedDay][0] != 0)
 			{
-				document.getElementById("userBreakfast").value = array2D[4][0] + 1;
+				document.getElementById("userBreakfast").value = array2D[4][0];
 			}
 			else
 			{
@@ -211,7 +211,7 @@ document.getElementById("editFri").addEventListener('click', function ()
 			}
 			if (array2D[selectedDay][1] != 0)
 			{
-				document.getElementById("userLunch").value = array2D[4][1] + 1;
+				document.getElementById("userLunch").value = array2D[4][1];
 			}
 			else
 			{
@@ -219,7 +219,7 @@ document.getElementById("editFri").addEventListener('click', function ()
 			}
 			if (array2D[selectedDay][2] != 0)
 			{
-				document.getElementById("userDinner").value = array2D[4][2] + 1;
+				document.getElementById("userDinner").value = array2D[4][2];
 			}
 			else
 			{
@@ -236,7 +236,7 @@ document.getElementById("editSat").addEventListener('click', function ()
 		{
 			if (array2D[selectedDay][0] != 0)
 			{
-			document.getElementById("userBreakfast").value = array2D[5][0] + 1;
+			document.getElementById("userBreakfast").value = array2D[5][0];
 			}
 			else
 			{
@@ -244,7 +244,7 @@ document.getElementById("editSat").addEventListener('click', function ()
 			}
 			if (array2D[selectedDay][1] != 0)
 			{
-				document.getElementById("userLunch").value = array2D[5][1] + 1;
+				document.getElementById("userLunch").value = array2D[5][1];
 			}
 			else
 			{
@@ -252,7 +252,7 @@ document.getElementById("editSat").addEventListener('click', function ()
 			}
 			if (array2D[selectedDay][2] != 0)
 			{
-				document.getElementById("userDinner").value = array2D[5][2] + 1;
+				document.getElementById("userDinner").value = array2D[5][2];
 			}
 			else
 			{
@@ -272,7 +272,7 @@ document.getElementById("editSun").addEventListener('click', function ()
 		{
 			if (array2D[selectedDay][0] != 0)
 			{
-				document.getElementById("userBreakfast").value = array2D[6][0] + 1;
+				document.getElementById("userBreakfast").value = array2D[6][0];
 			}
 			else
 			{
@@ -280,7 +280,7 @@ document.getElementById("editSun").addEventListener('click', function ()
 			}
 			if (array2D[selectedDay][1] != 0)
 			{
-				document.getElementById("userLunch").value = array2D[6][1] + 1;
+				document.getElementById("userLunch").value = array2D[6][1];
 			}
 			else
 			{
@@ -288,7 +288,7 @@ document.getElementById("editSun").addEventListener('click', function ()
 			}
 			if (array2D[selectedDay][2] != 0)
 			{
-				document.getElementById("userDinner").value = array2D[6][2] + 1;
+				document.getElementById("userDinner").value = array2D[6][2];
 			}
 			else
 			{

@@ -52,7 +52,7 @@ function displayHome()
             {
                 if (array2D[z][0] != 0)
                 {
-            document.getElementById(calendarElements1[z]).innerHTML = recipes[array2D[z][0]].Name;
+            document.getElementById(calendarElements1[z]).innerHTML = recipes[array2D[z][0] - 1].Name;
                   }
                 else
                 {
@@ -62,7 +62,7 @@ function displayHome()
 
                 if (array2D[z][1] != 0)
                 {
-                    document.getElementById(calendarElements2[z]).innerHTML = recipes[array2D[z][1]].Name;
+                    document.getElementById(calendarElements2[z]).innerHTML = recipes[array2D[z][1] - 1].Name;
                 }
                 else
                 {
@@ -72,7 +72,7 @@ function displayHome()
 
                 if (array2D[z][2] != 0)
                 {
-                    document.getElementById(calendarElements3[z]).innerHTML = recipes[array2D[z][2]].Name;
+                    document.getElementById(calendarElements3[z]).innerHTML = recipes[array2D[z][2] - 1].Name;
                 }
                 else
                 {
