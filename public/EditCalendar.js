@@ -33,7 +33,7 @@ var selectedDay;
 
 document.getElementById("saveBreakfastBtn").addEventListener('click', function ()
     	{
-    		if (selectedDay != null && document.getElementById("userBreakfast").value != "" && document.getElementById("userBreakfast").value != 0)
+    		if (selectedDay != null && document.getElementById("userBreakfast").value != "" && document.getElementById("userBreakfast").value != 0 && document.getElementById("userBreakfast").value <= recipes.length)
     		{
     			var userNum = document.getElementById("userBreakfast").value;
     			array2D[selectedDay][0] = userNum;
@@ -43,7 +43,7 @@ document.getElementById("saveBreakfastBtn").addEventListener('click', function (
 
 document.getElementById("saveLunchBtn").addEventListener('click', function ()
     	{
-    		if (selectedDay != null && document.getElementById("userLunch").value != "" && document.getElementById("userBreakfast").value != 0)
+    		if (selectedDay != null && document.getElementById("userLunch").value != "" && document.getElementById("userBreakfast").value != 0 && document.getElementById("userBreakfast").value <= recipes.length)
     		{
     			array2D[selectedDay][1] = document.getElementById("userLunch").value;
     			localStorage.setItem(currentUser + "CalendarConfig", JSON.stringify(array2D));
@@ -52,7 +52,7 @@ document.getElementById("saveLunchBtn").addEventListener('click', function ()
 
 document.getElementById("saveDinnerBtn").addEventListener('click', function ()
     	{
-    		if (selectedDay != null && document.getElementById("userDinner").value != "" && document.getElementById("userBreakfast").value != 0)
+    		if (selectedDay != null && document.getElementById("userDinner").value != "" && document.getElementById("userBreakfast").value != 0 && document.getElementById("userBreakfast").value <= recipes.length)
     		{
     			array2D[selectedDay][2] = document.getElementById("userDinner").value;
     			localStorage.setItem(currentUser + "CalendarConfig", JSON.stringify(array2D));

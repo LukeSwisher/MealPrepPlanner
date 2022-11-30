@@ -43,6 +43,9 @@ document.getElementById("clearHomeBtn").addEventListener('click', function ()
             }
             localStorage.setItem(currentUser + "CalendarConfig", JSON.stringify(array2D));
             console.log(JSON.stringify(array2D));
+            document.getElementById("breakfastDisplay").innerHTML = "";
+            document.getElementById("lunchDisplay").innerHTML = "";
+            document.getElementById("dinnerDisplay").innerHTML = "";
             displayHome();
         });
 
@@ -81,3 +84,216 @@ function displayHome()
                 }
             }
         }
+
+
+        document.getElementById("selectMon").addEventListener('click', function ()
+        {
+                if (array2D[0][0] != 0)
+                {
+                    document.getElementById("breakfastDisplay").innerHTML = "Breakfast: " + formatRecipe(recipes[array2D[0][0] - 1]);
+                }
+                else
+                {
+                    document.getElementById("breakfastDisplay").innerHTML = "No recipe selected";
+                }
+
+                if (array2D[0][1] != 0)
+                {
+                    document.getElementById("lunchDisplay").innerHTML = "Lunch: " + formatRecipe(recipes[array2D[0][1] - 1]);
+                }
+                else
+                {
+                    document.getElementById("lunchDisplay").innerHTML = "No recipe selected";
+                }
+
+                if (array2D[0][2] != 0)
+                {
+                    document.getElementById("dinnerDisplay").innerHTML = "Dinner: " + formatRecipe(recipes[array2D[0][2] - 1]);
+                }
+                else
+                {
+                    document.getElementById("dinnerDisplay").innerHTML = "No recipe selected";
+                }
+        });
+
+
+                document.getElementById("selectTues").addEventListener('click', function ()
+        {
+                if (array2D[1][0] != 0)
+                {
+                    document.getElementById("breakfastDisplay").innerHTML = "Breakfast: " + formatRecipe(recipes[array2D[1][0] - 1]);
+                }
+                else
+                {
+                    document.getElementById("breakfastDisplay").innerHTML = "No recipe selected";
+                }
+
+                if (array2D[1][1] != 0)
+                {
+                    document.getElementById("lunchDisplay").innerHTML = "Lunch: " + formatRecipe(recipes[array2D[1][1] - 1]);
+                }
+                else
+                {
+                    document.getElementById("lunchDisplay").innerHTML = "No recipe selected";
+                }
+
+                if (array2D[1][2] != 0)
+                {
+                    document.getElementById("dinnerDisplay").innerHTML = "Dinner: " + formatRecipe(recipes[array2D[1][2] - 1]);
+                }
+                else
+                {
+                    document.getElementById("dinnerDisplay").innerHTML = "No recipe selected";
+                }
+        });
+
+
+                        document.getElementById("selectWed").addEventListener('click', function ()
+        {
+                if (array2D[2][0] != 0)
+                {
+                    document.getElementById("breakfastDisplay").innerHTML = "Breakfast: " + formatRecipe(recipes[array2D[2][0] - 1]);
+                }
+                else
+                {
+                    document.getElementById("breakfastDisplay").innerHTML = "No recipe selected";
+                }
+
+                if (array2D[2][1] != 0)
+                {
+                    document.getElementById("lunchDisplay").innerHTML = "Lunch: " + formatRecipe(recipes[array2D[2][1] - 1]);
+                }
+                else
+                {
+                    document.getElementById("lunchDisplay").innerHTML = "No recipe selected";
+                }
+
+                if (array2D[2][2] != 0)
+                {
+                    document.getElementById("dinnerDisplay").innerHTML = "Dinner: " + formatRecipe(recipes[array2D[2][2] - 1]);
+                }
+                else
+                {
+                    document.getElementById("dinnerDisplay").innerHTML = "No recipe selected";
+                }
+        });
+
+                                document.getElementById("selectThurs").addEventListener('click', function ()
+        {
+                if (array2D[3][0] != 0)
+                {
+                    document.getElementById("breakfastDisplay").innerHTML = "Breakfast: " + formatRecipe(recipes[array2D[3][0] - 1]);
+                }
+                else
+                {
+                    document.getElementById("breakfastDisplay").innerHTML = "No recipe selected";
+                }
+
+                if (array2D[3][1] != 0)
+                {
+                    document.getElementById("lunchDisplay").innerHTML = "Lunch: " + formatRecipe(recipes[array2D[3][1] - 1]);
+                }
+                else
+                {
+                    document.getElementById("lunchDisplay").innerHTML = "No recipe selected";
+                }
+
+                if (array2D[3][2] != 0)
+                {
+                    document.getElementById("dinnerDisplay").innerHTML = "Dinner: " + formatRecipe(recipes[array2D[3][2] - 1]);
+                }
+                else
+                {
+                    document.getElementById("dinnerDisplay").innerHTML = "No recipe selected";
+                }
+        });
+
+                            document.getElementById("selectFri").addEventListener('click', function ()
+        {
+                if (array2D[4][0] != 0)
+                {
+                    document.getElementById("breakfastDisplay").innerHTML = "Breakfast: " + formatRecipe(recipes[array2D[4][0] - 1]);
+                }
+                else
+                {
+                    document.getElementById("breakfastDisplay").innerHTML = "No recipe selected";
+                }
+
+                if (array2D[4][1] != 0)
+                {
+                    document.getElementById("lunchDisplay").innerHTML = "Lunch: " + formatRecipe(recipes[array2D[4][1] - 1]);
+                }
+                else
+                {
+                    document.getElementById("lunchDisplay").innerHTML = "No recipe selected";
+                }
+
+                if (array2D[4][2] != 0)
+                {
+                    document.getElementById("dinnerDisplay").innerHTML = "Dinner: " + formatRecipe(recipes[array2D[4][2] - 1]);
+                }
+                else
+                {
+                    document.getElementById("dinnerDisplay").innerHTML = "No recipe selected";
+                }
+        });
+
+                            document.getElementById("selectSat").addEventListener('click', function ()
+        {
+                if (array2D[5][0] != 0)
+                {
+                    document.getElementById("breakfastDisplay").innerHTML = "Breakfast: " + formatRecipe(recipes[array2D[5][0] - 1]);
+                }
+                else
+                {
+                    document.getElementById("breakfastDisplay").innerHTML = "No recipe selected";
+                }
+
+                if (array2D[5][1] != 0)
+                {
+                    document.getElementById("lunchDisplay").innerHTML = "Lunch: " + formatRecipe(recipes[array2D[5][1] - 1]);
+                }
+                else
+                {
+                    document.getElementById("lunchDisplay").innerHTML = "No recipe selected";
+                }
+
+                if (array2D[5][2] != 0)
+                {
+                    document.getElementById("dinnerDisplay").innerHTML = "Dinner: " + formatRecipe(recipes[array2D[5][2] - 1]);
+                }
+                else
+                {
+                    document.getElementById("dinnerDisplay").innerHTML = "No recipe selected";
+                }
+        });
+
+                            document.getElementById("selectSun").addEventListener('click', function ()
+        {
+                if (array2D[6][0] != 0)
+                {
+                    document.getElementById("breakfastDisplay").innerHTML = "Breakfast: " + formatRecipe(recipes[array2D[6][0] - 1]);
+                }
+                else
+                {
+                    document.getElementById("breakfastDisplay").innerHTML = "No recipe selected";
+                }
+
+                if (array2D[6][1] != 0)
+                {
+                    document.getElementById("lunchDisplay").innerHTML = "Lunch: " + formatRecipe(recipes[array2D[6][1] - 1]);
+                }
+                else
+                {
+                    document.getElementById("lunchDisplay").innerHTML = "No recipe selected";
+                }
+
+                if (array2D[6][2] != 0)
+                {
+                    document.getElementById("dinnerDisplay").innerHTML = "Dinner: " + formatRecipe(recipes[array2D[6][2] - 1]);
+                }
+                else
+                {
+                    document.getElementById("dinnerDisplay").innerHTML = "No recipe selected";
+                }
+        });
