@@ -1,1 +1,1 @@
-[{"id":1669674560932,"username":"ryanator02","email":"fryanjames74@gmail.com","password":"$2b$10$84R0y0HH.e3APX8bQXhSWOijvDKw/OzTGj9kWOaI7jXHgXxQ180pG"},{"id":1669680884982,"username":"1","email":"a@a","password":"$2b$10$lFRTRq0w0Ka3C4sMcT3XWOlGw0v5Tt.ZKkPk6lpnYpA5pQanGw1fC"}]
+[]

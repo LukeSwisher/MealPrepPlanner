@@ -16,7 +16,7 @@
             recipes = JSON.parse(localStorage.getItem(currentUser + "Recipes"));
         }
         console.log(JSON.stringify(recipes));
-        displayRecipes(recipes);
+        displayRecipes(recipes, "allRecipes");
 
         //add recipe button
         document.getElementById("addRecipeBtn").addEventListener('click', function ()
@@ -40,7 +40,7 @@
                 document.getElementById("addInstructions").value = "";
                 document.getElementById("addIngredients").value = "";
 
-                displayRecipes(recipes);
+                displayRecipes(recipes,"allRecipes");
             }
         });
 
@@ -57,15 +57,22 @@
         });
 
         //display the array inside of the textbox in a numbered list
-        function displayRecipes(array)
+        function displayRecipes(array, displayID)
         {
             displayString = "";
-
-            for (var x = 0; x < array.length; x++)
+            if(recipes.length != 0)
+            {
+              for (var x = 0; x < array.length; x++)
             {
                 displayString = displayString + "\n" + (x+1) + ". " + array[x].Name;
             }
-            document.getElementById("allRecipes").innerHTML = displayString;
+            document.getElementById(displayID).innerHTML = displayString;  
+            }
+            else
+            {
+                console.log("failed " + displayString);
+            }
+            
         }
 
         //format string to display selected recipe

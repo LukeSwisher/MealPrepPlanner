@@ -1,1 +1,1 @@
-var currentUser = "a@a";
+var currentUser = "fryanjames74@gmail.com";
