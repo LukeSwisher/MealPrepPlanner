@@ -4,9 +4,6 @@ var array2D
 var flag = 1;
 var selectedDay;
 
-
-
-
 //check if key exists in the users local storage: create array if it doesn't exist
         if (localStorage.getItem(currentUser + "CalendarConfig") === null || localStorage.getItem(currentUser + "Recipes") === " ")
         {
@@ -38,10 +35,12 @@ document.getElementById("saveBreakfastBtn").addEventListener('click', function (
     	{
     		if (selectedDay != null && document.getElementById("userBreakfast").value != "" && document.getElementById("userBreakfast").value != 0)
     		{
-    			array2D[selectedDay][0] = document.getElementById("userBreakfast").value;
+    			var userNum = document.getElementById("userBreakfast").value;
+    			array2D[selectedDay][0] = userNum;
     			localStorage.setItem(currentUser + "CalendarConfig", JSON.stringify(array2D));
 
     			//add code to display on calendar
+    			document.getElementById(calendarElements1[selectedDay]).innerHTML = recipes[userNum];
     		}
         });
 
