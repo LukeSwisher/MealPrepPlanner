@@ -1,3 +1,8 @@
+        let defaultRecipe = {
+                    Name: "Ramen",
+                    Instructions: "Boil noodles until cooked, add flavoring.",
+                    Ingredients: "Water, Noodles",
+                  };
         //string for displaying the list of recipes
         var displayString = " ";
 
@@ -8,7 +13,7 @@
         if (localStorage.getItem(currentUser + "Recipes") === null || localStorage.getItem(currentUser + "Recipes") === " ")
         {
             localStorage.setItem(currentUser + "Recipes", " ")
-            recipes = [];
+            recipes = [defaultRecipe];
         }
         else
         {
