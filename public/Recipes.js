@@ -69,7 +69,7 @@
             {
               for (var x = 0; x < array.length; x++)
             {
-                displayString = displayString + "\n" + (x+1) + ". " + array[x].Name;
+                displayString = displayString + (x+1) + ". " + array[x].Name + "<br/>";
             }
             document.getElementById(displayID).innerHTML = displayString;  
             }

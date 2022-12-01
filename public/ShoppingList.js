@@ -49,7 +49,7 @@
 
         for (var x = 0; x < array.length; x++)
         {
-            displayString = displayString + "\n" + (x+1) + ". " + array[x];
+            displayString = displayString + "<br/>" + (x+1) + ". " + array[x];
         }
         document.getElementById("shoppingListDisplay").innerHTML = displayString;
     }

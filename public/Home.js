@@ -43,9 +43,9 @@ document.getElementById("clearHomeBtn").addEventListener('click', function ()
             }
             localStorage.setItem(currentUser + "CalendarConfig", JSON.stringify(array2D));
             console.log(JSON.stringify(array2D));
-            document.getElementById("breakfastDisplay").innerHTML = "";
-            document.getElementById("lunchDisplay").innerHTML = "";
-            document.getElementById("dinnerDisplay").innerHTML = "";
+            document.getElementById("breakfastDisplay").innerHTML = "Breakfast: ";
+            document.getElementById("lunchDisplay").innerHTML = "Lunch: ";
+            document.getElementById("dinnerDisplay").innerHTML = "Dinner: ";
             displayHome();
         });
 

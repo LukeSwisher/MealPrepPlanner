@@ -3,32 +3,94 @@ var labelString = "Enter recipe numbers for: ";
 var array2D
 var flag = 1;
 var selectedDay;
+var neededIngredients = "";
 
 //check if key exists in the users local storage: create array if it doesn't exist
-        if (localStorage.getItem(currentUser + "CalendarConfig") === null || localStorage.getItem(currentUser + "CalendarConfig") === " ")
-        {
-        	let array2D = new Array(7); // create an empty array of
-			for (var i = 0; i < array2D.length; i++) 
-			{
-  				array2D[i] = new Array(3); // make each element an array
-			}
+if (localStorage.getItem(currentUser + "CalendarConfig") === null || localStorage.getItem(currentUser + "CalendarConfig") === " ")
+{
+    let array2D = new Array(7); // create an empty array of size 7
+	for (var i = 0; i < array2D.length; i++) 
+	{
+  		array2D[i] = new Array(3); // make each element an array
+	}
 			
-			for (var x = 0; x < array2D.length; x++)
-			{
-				for (var y = 0; y < 3; y++)
-				{
-					array2D[x][y] = 0;
-				}
-			}
-			console.log(JSON.stringify(array2D));
-            localStorage.setItem(currentUser + "CalendarConfig", JSON.stringify(array2D));
-        }
-        else
-        {
-            //set recipes to saved array
-            array2D = JSON.parse(localStorage.getItem(currentUser + "CalendarConfig"));
-            console.log(JSON.stringify(array2D));
-        }
+	for (var x = 0; x < array2D.length; x++)
+	{
+		for (var y = 0; y < 3; y++)
+		{
+			array2D[x][y] = 0;
+		}
+	}
+	console.log(JSON.stringify(array2D));
+    localStorage.setItem(currentUser + "CalendarConfig", JSON.stringify(array2D));
+}
+else
+{
+    //set array2D to saved array
+    array2D = JSON.parse(localStorage.getItem(currentUser + "CalendarConfig"));
+    console.log(JSON.stringify(array2D));
+}
+
+        //check if "Pantry" key exists in local storage: create array if it doesn't exist
+    	if (localStorage.getItem(currentUser + "Pantry") === null || localStorage.getItem(currentUser + "Pantry") === " ")
+    	{
+    	    localStorage.setItem(currentUser + "Pantry", " ")
+    	    pantryItems = [];
+    	}
+    	else
+    	{
+    	    //set pantryItems to saved array
+    	    pantryItems = JSON.parse(localStorage.getItem(currentUser + "Pantry"));
+    	}
+
+    	    //check if "ShoppingList" key exists in local storage: create array if it doesn't exist
+    if (localStorage.getItem(currentUser + "ShoppingList") === null || localStorage.getItem(currentUser + "ShoppingList") === " ")
+    {
+        localStorage.setItem(currentUser + "ShoppingList", " ")
+        shoppingList = [];
+    }
+    else
+    {
+        //set shoppingList to saved array
+        shoppingList = JSON.parse(localStorage.getItem(currentUser + "ShoppingList"));
+    }
+
+        function compareLists()
+   		{
+        	var pantryStringArray = pantryItems;
+        	var neededStringArray = neededIngredients.split(",");
+        	var found = 0;
+
+        	if (pantryStringArray.length > 0 && neededStringArray.length > 0)
+        	{
+            	for (var x = 0; x < neededStringArray.lenghth; x++)
+           		{
+                	for (var y = 0; y < pantryStringArray.length; y++)
+                	{
+                	    if (neededStringArray[x] == pantryStringArray[y])
+                	    {
+                	        found = 1;
+                	    }
+                	}
+				if (found != 1)
+                {
+                	shoppingList.push(neededStringArray[x]);
+                }
+                else
+                {
+                	found = 0;
+                }
+            	}
+        	}
+        	else if (pantryStringArray.length == 0 && neededStringArray.length > 0)
+        	{
+        		for (var a = 0; a < neededStringArray.length - 1; a++)
+        		{
+        			shoppingList.push(neededStringArray[a]);
+        			localStorage.setItem(currentUser + "ShoppingList", JSON.stringify(shoppingList));
+        		}
+        	}
+    	}
 
 
 document.getElementById("saveBreakfastBtn").addEventListener('click', function ()
@@ -38,6 +100,14 @@ document.getElementById("saveBreakfastBtn").addEventListener('click', function (
     			var userNum = document.getElementById("userBreakfast").value;
     			array2D[selectedDay][0] = userNum;
     			localStorage.setItem(currentUser + "CalendarConfig", JSON.stringify(array2D));
+
+    			var temp = recipes[userNum - 1].Ingredients.split(", ");
+
+    			for (var z = 0; z < temp.length; z++)
+    			{
+    				neededIngredients = neededIngredients + temp[z] + ",";
+    			}
+    			compareLists();
     		}
         });
 
@@ -47,6 +117,14 @@ document.getElementById("saveLunchBtn").addEventListener('click', function ()
     		{
     			array2D[selectedDay][1] = document.getElementById("userLunch").value;
     			localStorage.setItem(currentUser + "CalendarConfig", JSON.stringify(array2D));
+
+    			var temp = recipes[userNum - 1].Ingredients.split(", ");
+
+    			for (var z = 0; z < temp.length; z++)
+    			{
+    				neededIngredients = neededIngredients + temp[z] + ",";
+    			}
+    			compareLists();
     		}
         });
 
@@ -56,6 +134,14 @@ document.getElementById("saveDinnerBtn").addEventListener('click', function ()
     		{
     			array2D[selectedDay][2] = document.getElementById("userDinner").value;
     			localStorage.setItem(currentUser + "CalendarConfig", JSON.stringify(array2D));
+
+    			var temp = recipes[userNum - 1].Ingredients.split(", ");
+
+    			for (var z = 0; z < temp.length; z++)
+    			{
+    				neededIngredients = neededIngredients + temp[z] + ",";
+    			}
+    			compareLists();
     		}
         });
 
