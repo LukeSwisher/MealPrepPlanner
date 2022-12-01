@@ -1,7 +1,7 @@
-let newRecipe1 = {
+﻿let newRecipe1 = {
     Name: "Spaghetti and Meatballs",
-    Instructions: "Boil a Large",
-    Ingredients: "",
+    Instructions: "Boil a large pot of water. Add a pinch of salt. In the mean time set a pan to medium high heat and add oil. Mix garlic powder, diced onions, paprika, italian seasoning, salt and pepper together in bowl. Begin mixing ground beef with seasoning and form into balls. Cook until meatballs are dark brown on the outside. Boil spaghetti noodles for 10 minutes. Strain spahghetti and add sauce and meatballs.",
+    Ingredients: "ground beef, spaghetti sauce, garlic powder, salt, pepper, diced onioins, paprika, italian seasoning",
 };
 
 let newRecipe2 = {
@@ -14,7 +14,7 @@ let newRecipe2 = {
     In another bowl, combine the mozzarella cheese with the pepperoni. Use your hands to mix it until they are well combined into a paste.
     
     Step 4
-    If you have an electric skillet, preheat it to 350 degrees Fahrenheit and place the butter in it. Place the butter in a 9-inch cast-iron skillet if you don�t have a skillet. Please place it in the preheating oven to melt while the oven is getting hot.
+    If you have an electric skillet, preheat it to 350 degrees Fahrenheit and place the butter in it. Place the butter in a 9-inch cast-iron skillet if you don’t have a skillet. Please place it in the preheating oven to melt while the oven is getting hot.
     
     Step 5
     Carefully remove the pizza crust from the parchment paper and transfer it to your skillet or electric skillet. Brush the melted butter on top of your crust, and then spread half of your cheese mix on top of it. Then add half of your pepperoni paste and half of your tomato sauce mixture.
@@ -66,25 +66,25 @@ let newRecipe2 = {
     -Tomato
     -Onion Rings
     -Top bun",
-    Ingredients: "1 pound crabmeat,
-    1 egg lightly beaten,
-    1/2 cup breadcrumbs,
-    1/4 cup mayonnaise,
-    2 tablespoons minced chives,
-    1 tablespoon Dijon mustard,
-    1 tablespoon lemon juice,
-    1 teaspoon celery seed,
-    1 teaspoon onion powder,
-    1/4 teaspoon freshly ground pepper,
-    1/4 teaspoon of cayenne pepper,
-    Hot sauce/Tabasco sauce to taste,
-    1 tablespoon extra-virgin olive oil,
-    2 teaspoons unsalted butter,
-    4 large sweet onions, peeled and sliced into thick rings,
-    1 cup eggs (beaten),
-    1 cup all-purpose flour,
-    2 cups bread crumbs,
-    1 tesalt,
+    Ingredients: "crabmeat,
+    egg lightly beaten,
+    breadcrumbs,
+    mayonnaise,
+    minced chives,
+    Dijon mustard,
+    lemon juice,
+    celery seed,
+    onion powder,
+    freshly ground pepper,
+    cayenne pepper,
+    Hot sauce/Tabasco,
+    extra-virgin olive oil,
+    unsalted butter,
+    large sweet onions,
+    eggs,
+    all-purpose flour,
+    bread crumbs,
+    salt,
     black pepper,
     cayenne pepper,
     dried oregano,
@@ -97,7 +97,7 @@ let newRecipe2 = {
     American Cheese,
     Dill Pickle slices,
     Lettuce,
-    Tomato?",
+    Tomato​",
   };
 
   let newRecipe4 = {
@@ -125,7 +125,42 @@ let newRecipe2 = {
     salt and freshly ground black pepper to taste,
     flour,
     water,
-    fresh dill weed for garnish,
+    fresh dill weed,
     cooking oil",
   };
+  
+  let newRecipe5 = {
+                    Name: "Big Mac",
+                    Instructions: "You will first season the hamburger meat with salt and pepper.  Shape into 10 thin patties.  Grill the patties to your liking.
+
+Spread butter on cut sides of the buns and add to grill until it browns slightly.  Make sure the middle bun toasts on each side.
+
+Add the secret sauce, lettuce, cheese, onions and one patty to the bottom bun. Top it off with the middle bun.
+
+Then add the sauce. lettuce, pickles, onion and another patty to the middle bun. Top with the top bun and you are all set.",
+                    Ingredients: "Ground Chuck meat,
+Salt & Pepper,
+Butter,
+American Cheese,
+Minced Onion,
+Pickle Slices,
+Iceberg Lettuce,
+Special Sauce",
+                  };
+
+let newRecipe6 = {
+   Name: "Banana Mayonnaise",
+   Instructions: "1. Peal and wash your bananas, cut them into small sizes and blend.
+2. Put your mayonnaise into a mixing bowl, pour in your banana smoothie
+3. whisk your smoothie and mayonnaise together, if the mixture gets lighter add some mayonnaise to it. And if you want it much sweeter, be sure to add some sugar to it.
+When it's set pour it into a jar and store in your freezer for 50mins before using.",
+   Ingredients: "bananas, mayonnaise",
+}; 
+                
+let newRecipe7 = {
+                    Name: "Toast",
+                    Instructions: "1. Put Bread into toaster
+                    2. Serve",
+                    Ingredients: "bread",
+                  };
 
