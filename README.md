@@ -7,3 +7,7 @@ Instructions for running:
 3. Use the command "node app.js" to start the server.
 4. Go to http://localhost:3000/ on a browser to view the webpage.
 5. Click the 'Register' button on the home screen and create an account and access the app's features.
+
+References: 
+https://medium.com/swlh/basic-login-system-with-node-js-99acf02275b9
+https://nicepage.com/
