@@ -14,7 +14,7 @@ var currentUser = "";
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, './public')));
 
-
+//Reference https://medium.com/swlh/basic-login-system-with-node-js-99acf02275b9 A lot of code inspiration was used from here, but most of it was changed to work with our system
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 });
