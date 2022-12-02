@@ -1,0 +1,165 @@
+﻿let newRecipe1 = {
+    Name: "Spaghetti and Meatballs",
+    Instructions: "Boil a large pot of water. Add a pinch of salt. In the mean time set a pan to medium high heat and add oil. Mix garlic powder, diced onions, paprika, italian seasoning, salt and pepper together in bowl. Begin mixing ground beef with seasoning and form into balls. Cook until meatballs are dark brown on the outside. Boil spaghetti noodles for 10 minutes. Strain spahghetti and add sauce and meatballs.",
+    Ingredients: "ground beef, spaghetti sauce, garlic powder, salt, pepper, diced onioins, paprika, italian seasoning",
+};
+
+let newRecipe2 = {
+    Name: "Chuck E Cheese Pizza",
+    Instructions: "Step 1
+    Preheat the oven to about 450 degrees Fahrenheit. Line a baking sheet with parchment paper. Tuck the pizza dough into a circle on top of it and then, using a fork, poke holes on top of it to let steam escape as it cooks. While this crust is cooking, make the topping.<br/><br/><br/>Step 2
+    Stir together the cottage cheese, queso fresco, and tomato sauce in a bowl. Season with salt and pepper. Set the bowl aside.""
+    
+    Step 3
+    In another bowl, combine the mozzarella cheese with the pepperoni. Use your hands to mix it until they are well combined into a paste.
+    
+    Step 4
+    If you have an electric skillet, preheat it to 350 degrees Fahrenheit and place the butter in it. Place the butter in a 9-inch cast-iron skillet if you don’t have a skillet. Please place it in the preheating oven to melt while the oven is getting hot.
+    
+    Step 5
+    Carefully remove the pizza crust from the parchment paper and transfer it to your skillet or electric skillet. Brush the melted butter on top of your crust, and then spread half of your cheese mix on top of it. Then add half of your pepperoni paste and half of your tomato sauce mixture.
+    
+    Step 6
+    Place the piece of parchment paper on top of your crust. Fold over the parchment paper and make sure to seal both sides well. Using a fork or a knife, poke holes all over your pizza to let steam escape as it cooks.
+    
+    Step 7
+    Bake for about 7 minutes, remove from the oven, and carefully open up your pizza from the top side. Brush half of the cheese mix on one side and add another layer of cheese with pepperoni topping on top. Then add another layer of the tomato sauce mix, pepperoni, and cheese. Bake for another 7 minutes and then remove from the oven.
+    
+    Step 8
+    let your pizza cool for about 5 minutes, and then slice it into wedges using a pizza cutter. Serve your pizza warm with a side of ranch or blue cheese dip. This yummy recipe is best served with old fashion vanilla ice cream. Make this pizza recipe at home and share your delicious feelings with your loved ones.",
+    Ingredients: "pizza dough,
+    pepperoni chopped,
+    queso fresco,
+    cottage cheese,
+    tomato sauce pizza sauce,
+    mozzarella cheese,
+    butter",
+  };
+
+  let newRecipe3 = {
+    Name: "Krabby Patty",
+    Instructions: "STEP 1
+    Directions for patties:
+    
+    Mix crab, egg, breadcrumbs, mayonnaise, chives, mustard, lemon juice, celery seed, onion powder, pepper and hot sauce in a large bowl. Form into 6 patties.
+    
+    Heat oil and butter in a large nonstick skillet over medium heat until the butter stops foaming. Cook the patties until golden brown, about 4 minutes per side.
+    
+    Directions for onion rings:
+    
+    Place the onions, eggs, and flour into separate shallow bowls.
+    
+    In another shallow bowl, stir together the bread crumbs, salt, pepper, cayenne, oregano, basil, and red pepper.
+    
+    Heat oil in a heavy skillet or deep-fryer to 365 degrees F (180 degrees C). Dip rings of onion into flour, then into the egg, and then into the bread crumb mixture, shaking off any excess after each dip.
+    
+    Carefully drop each onion ring into the hot oil, and fry for about 30 seconds on each side, or until golden. Remove from hot oil to paper towels to drain.
+    
+    Assemble as follows:
+    -Bottom bun
+    -Patty
+    -Ketchup
+    -Mustard
+    -Cheese (or you can melt over patties)
+    -Two pickle slices
+    -Lettuce
+    -Tomato
+    -Onion Rings
+    -Top bun",
+    Ingredients: "crabmeat,
+    egg lightly beaten,
+    breadcrumbs,
+    mayonnaise,
+    minced chives,
+    Dijon mustard,
+    lemon juice,
+    celery seed,
+    onion powder,
+    freshly ground pepper,
+    cayenne pepper,
+    Hot sauce/Tabasco,
+    extra-virgin olive oil,
+    unsalted butter,
+    large sweet onions,
+    eggs,
+    all-purpose flour,
+    bread crumbs,
+    salt,
+    black pepper,
+    cayenne pepper,
+    dried oregano,
+    basil,
+    red pepper,
+    oil,
+    Hamburger buns,
+    Ketchup,
+    Mustard,
+    American Cheese,
+    Dill Pickle slices,
+    Lettuce,
+    Tomato​",
+  };
+
+  let newRecipe4 = {
+    Name: "Fresh Anchovy Pancakes",
+    Instructions: "Behead and gut anchovies using a spoon or your own long nails
+    Remove the back bone - it should come out very easily. If you are working with smelt, you may need to slice it off the bone, depending on the size of the fish.
+    Prepare the batter:
+    Beat the eggs
+    add about 3 tbsp of water, salt, pepper and whisk well, until smooth
+    Add flour in small batches until your batter is buttermilky thick or slightly thicker - it's better err on the thicker side
+    Toss all of the fish into the batter and carefully stir to coat
+    -
+    Heat the cooking oil in a pancake skillet
+    Reduce heat to medium
+    Spoon the fish with batter onto the skillet, forming pancakes about 4 inches in diameter - they should be flat.
+    Fry on both sides until pleasantly browned, making sure the fish cooked through
+    -
+    Remove from oil with slotted spoon or fork, shaking off the excess oil and place on paper towel.
+    Sprinkle with chopped dill weed.
+    -
+    Serve hot with new potatoes, mashed potatoes, or summer salads or
+    Cool, chill and serve cold on your sandwich - best with English cucumber, feta cheese, scallions, ripe beefsteak tomatoes and lots of fresh greens",
+    Ingredients: "1 lbs fresh anchovies/sprats smelt or other small fish,
+    3 eggs or equivalent egg-beaters,
+    salt and freshly ground black pepper to taste,
+    flour,
+    water,
+    fresh dill weed,
+    cooking oil",
+  };
+  
+  let newRecipe5 = {
+                    Name: "Big Mac",
+                    Instructions: "You will first season the hamburger meat with salt and pepper.  Shape into 10 thin patties.  Grill the patties to your liking.
+
+Spread butter on cut sides of the buns and add to grill until it browns slightly.  Make sure the middle bun toasts on each side.
+
+Add the secret sauce, lettuce, cheese, onions and one patty to the bottom bun. Top it off with the middle bun.
+
+Then add the sauce. lettuce, pickles, onion and another patty to the middle bun. Top with the top bun and you are all set.",
+                    Ingredients: "Ground Chuck meat,
+Salt & Pepper,
+Butter,
+American Cheese,
+Minced Onion,
+Pickle Slices,
+Iceberg Lettuce,
+Special Sauce",
+                  };
+
+let newRecipe6 = {
+   Name: "Banana Mayonnaise",
+   Instructions: "1. Peal and wash your bananas, cut them into small sizes and blend.
+2. Put your mayonnaise into a mixing bowl, pour in your banana smoothie
+3. whisk your smoothie and mayonnaise together, if the mixture gets lighter add some mayonnaise to it. And if you want it much sweeter, be sure to add some sugar to it.
+When it's set pour it into a jar and store in your freezer for 50mins before using.",
+   Ingredients: "bananas, mayonnaise",
+}; 
+                
+let newRecipe7 = {
+                    Name: "Toast",
+                    Instructions: "1. Put Bread into toaster
+                    2. Serve",
+                    Ingredients: "bread",
+                  };

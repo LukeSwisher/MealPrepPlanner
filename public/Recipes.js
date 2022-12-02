@@ -1,15 +1,15 @@
         let defaultRecipe = {
-                    Name: "Ramen",
-                    Instructions: "Boil noodles until cooked, add flavoring.",
-                    Ingredients: "Water, Noodles",
-                  };
+            Name: "Ramen",
+            Instructions: "Boil noodles until cooked, add flavoring.",
+            Ingredients: "Water, Noodles",
+        };
         //string for displaying the list of recipes
         var displayString = " ";
 
         //array for storing recipes(user input)
         var recipes;
         
-        //check if "Recipe" key exists in the users local storage: create array if it doesn't exist
+        //check if key exists in the users local storage: create array if it doesn't exist
         if (localStorage.getItem(currentUser + "Recipes") === null || localStorage.getItem(currentUser + "Recipes") === " ")
         {
             localStorage.setItem(currentUser + "Recipes", " ")
@@ -21,7 +21,8 @@
             recipes = JSON.parse(localStorage.getItem(currentUser + "Recipes"));
         }
         console.log(JSON.stringify(recipes));
-        displayRecipes(recipes, "allRecipes");
+
+        displayRecipes(recipes, "allRecipes"); //Display recipes on page refresh
 
         //add recipe button
         document.getElementById("addRecipeBtn").addEventListener('click', function ()
@@ -33,7 +34,7 @@
                     Name: document.getElementById("addName").value,
                     Instructions: document.getElementById("addInstructions").value,
                     Ingredients: document.getElementById("addIngredients").value,
-                  };
+                };
 
                 //update recipes in local storage
                 recipes.push(newRecipe);
@@ -50,16 +51,16 @@
         });
 
         //display selected array
-    document.getElementById("selectBtn").addEventListener('click', function ()
-    {
-        displayString = "";
+        document.getElementById("selectBtn").addEventListener('click', function ()
+        {
+            displayString = "";
         if (document.getElementById("selectRecipe").value != "") //&& typeof document.getElementById("selectRecipe").value === 'number' && document.getElementById("selectRecipe").value <= recipes.length && document.getElementById("selectRecipe").value >= 1)
         {
             document.getElementById("selectedRecipe").innerHTML = formatRecipe(recipes[document.getElementById("selectRecipe").value - 1]);
             document.getElementById("selectRecipe").value = "";
         }
 
-        });
+    });
 
         //display the array inside of the textbox in a numbered list
         function displayRecipes(array, displayID)
@@ -68,21 +69,21 @@
             if(recipes.length != 0)
             {
               for (var x = 0; x < array.length; x++)
-            {
+              {
                 displayString = displayString + (x+1) + ". " + array[x].Name + "<br/>";
             }
             document.getElementById(displayID).innerHTML = displayString;  
-            }
-            else
-            {
-                console.log("failed " + displayString);
-            }
-            
+        }
+        else
+        {
+            console.log("failed " + displayString);
         }
 
+    }
+
         //format string to display selected recipe
-        function formatRecipe(Object)
-        {
-            displayString = Object.Name + "<br/><br/>" + "Ingredients:<br/>" + Object.Ingredients + "<br/><br/>" + "Instructions:<br/>" + Object.Instructions;
-            return displayString;
-        }
+    function formatRecipe(Object)
+    {
+        displayString = Object.Name + "<br/><br/>" + "Ingredients:<br/>" + Object.Ingredients + "<br/><br/>" + "Instructions:<br/>" + Object.Instructions;
+        return displayString;
+    }

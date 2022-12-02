@@ -14,7 +14,7 @@
     }
 
     
-    displayShoppingList(shoppingList);
+    displayShoppingList(shoppingList); //Display shopping list on page load and refresh
 
     //Add an item to the shopping list and display it
     document.getElementById("addItemBtn").addEventListener('click', function ()
@@ -40,7 +40,7 @@
       shoppingList = [];
       var temp = JSON.stringify(shoppingList);
       localStorage.setItem(currentUser + "ShoppingList", temp);
-    });
+  });
 
     //Display shoppingList array on the page
     function displayShoppingList(array)

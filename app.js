@@ -20,55 +20,70 @@ app.get('/', (req, res) => {
 });
 
 //Register a new user
-app.post('/register', async (req, res) => {
-    try {
+app.post('/register', async (req, res) => 
+{
+    try 
+    {
         let foundUser = users.find((data) => req.body.email === data.email);
-        if (!foundUser) {
+        if (!foundUser) 
+        {
 
-            let hashPassword = await bcrypt.hash(req.body.password, 10);
+            let hashPassword = await bcrypt.hash(req.body.password, 10); //Encrypt user password
+
             //creating newUser
-            let newUser = {
+            let newUser = 
+            {
                 id: Date.now(),
                 username: req.body.username,
                 email: req.body.email,
                 password: hashPassword,
             };
+
             //push the newly created user into the our database.
             users.push(newUser);
             console.log('User list', users);
 
             //write new user to users.txt
-            fs.writeFile("./users.txt", JSON.stringify(users), (err) => {
-            if (err) {
-            console.error(err);
-            return;
+            fs.writeFile("./users.txt", JSON.stringify(users), (err) => 
+            {
+                if (err) {
+                    console.error(err);
+                    return;
                 }
             })
 
             currentUser = req.body.email;
 
             //write current user to currentUser.js
-            fs.writeFile("./public/currentUser.js", "var currentUser = " + '"' + currentUser + '"' + ";", (err) => {
-            if (err) {
-            console.error(err);
-            return;
+            fs.writeFile("./public/currentUser.js", "var currentUser = " + '"' + currentUser + '"' + ";", (err) => 
+            {
+                if (err) {
+                    console.error(err);
+                    return;
                 }
             })
 
             res.send("<div align ='center'><h2>Registration successful</h2></div><br><br><div align='center'><a href='./home.html'>login</a></div><br><br><div align='center'><a href='./registration.html'>Register another user</a></div>");
-        } else {
+        } 
+        else 
+        {
             res.send("<div align ='center'><h2>Email already used</h2></div><br><br><div align='center'><a href='./registration.html'>Register again</a></div>");
         }
-    } catch {
+    } 
+    catch 
+    {
         res.send("Internal server error");
     }
 });
 
 //Login an existing user
-app.post('/login', async (req, res) => {
-    try {
+app.post('/login', async (req, res) => 
+{
+    try 
+    {
         let foundUser = users.find((data) => req.body.email === data.email);
-        if (foundUser) {
+        if (foundUser) 
+        {
 
             let submittedPass = req.body.password;
             let storedPass = foundUser.password;
@@ -78,30 +93,38 @@ app.post('/login', async (req, res) => {
             currentUser = req.body.email;
 
             //write current user to currentUser.js
-            fs.writeFile("./public/currentUser.js", "var currentUser = " + '"' + currentUser + '"' + ";", (err) => {
-            if (err) {
-            console.error(err);
-            return;
+            fs.writeFile("./public/currentUser.js", "var currentUser = " + '"' + currentUser + '"' + ";", (err) => 
+            {
+                if (err) 
+                {
+                    console.error(err);
+                    return;
                 }
             });
 
             //send user to home page
-            if (passwordMatch) {
+            if (passwordMatch) 
+            {
                 let usrname = foundUser.username;
                 res.redirect('/Home.html');
-            } else {
+            } 
+            else 
+            {
                 //bring up error message for invalid login
                 res.send("<div align ='center'><h2>Invalid email or password</h2></div><br><br><div align ='center'><a href='./login.html'>login again</a></div>");
             }
         }
-        else {
+        else 
+        {
             //encryption
             let fakePass = `$2b$$10$ifgfgfgfgfgfgfggfgfgfggggfgfgfga`;
             await bcrypt.compare(req.body.password, fakePass);
 
             res.send("<div align ='center'><h2>Invalid email or password</h2></div><br><br><div align='center'><a href='./login.html'>login again<a><div>");
         }
-    } catch {
+    } 
+    catch 
+    {
         res.send("Internal server error");
     }
 });
